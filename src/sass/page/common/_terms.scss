@@ -1,0 +1,124 @@
+.terms {
+  &__inner {
+    padding-bottom: rem(32);
+
+    @include mq(md) {
+      padding-bottom: rem(52);
+    }
+  }
+
+  &__wrapper {
+    background: #f8f8f8;
+    padding: rem(16);
+    border: solid rem(1) #e5e5e5;
+    border-radius: rem(8);
+
+    @include mq(md) {
+      padding: rem(24);
+    }
+  }
+
+  &__head {
+    margin-bottom: rem(16);
+
+    @include mq(md) {
+      bottom: rem(20);
+    }
+  }
+
+  &__title {
+    padding-left: rem(26);
+    font-size: rem(16);
+    color: #0089ff;
+    font-weight: $bold;
+    position: relative;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+
+    &:before {
+      content: "";
+      width: rem(18);
+      height: rem(18);
+      background: url(../images/common/circle-icon.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      top: rem(4);
+
+      @include mq(md) {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(16);
+
+    @include mq(md) {
+      flex-direction: row;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__summary {
+    font-size: rem(14);
+    font-weight: $bold;
+    line-height: 1.7;
+    margin-bottom: rem(8);
+
+    @include mq(md) {
+      font-size: rem(16);
+      width: 100%;
+      max-width: rem(200);
+      margin-bottom: 0;
+      padding-right: rem(16);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: rem(16);
+    margin-bottom: rem(6);
+
+    @include mq(md) {
+      margin-right: rem(20);
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: $black;
+      text-decoration: underline;
+      font-size: rem(14);
+
+      @include mq(md) {
+        font-size: rem(16);
+      }
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+body {
+  overflow-x: hidden;
+}
+
+.body__fixed {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+}

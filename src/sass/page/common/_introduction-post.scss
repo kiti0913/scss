@@ -1,0 +1,382 @@
+.introduction-post {
+  &__inner {
+    position: relative;
+
+    &:before {
+      z-index: 1;
+      position: absolute;
+      content: url(../images/article/dot-left.svg);
+      left: rem(-200);
+      top: rem(160);
+
+      @include mq(md) {
+        left: rem(-60);
+        top: rem(24);
+      }
+    }
+  }
+
+  &__head {
+    text-align: center;
+    margin-bottom: rem(32);
+
+    @include mq(md) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 3;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: 1.5;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+
+    a {
+      color: #0089ff;
+      text-decoration: underline;
+    }
+
+    h1,
+    h2 {
+      font-size: rem(18);
+      font-weight: $bold;
+      color: #0091eb;
+      background: $white;
+      display: block;
+      padding: rem(8) rem(8) rem(8) rem(26);
+      position: relative;
+      margin-top: rem(40);
+      margin-bottom: rem(16);
+
+      @include mq(md) {
+        font-size: rem(20);
+        margin-bottom: rem(18);
+        padding: rem(10) rem(10) rem(10) rem(26);
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: rem(8);
+        height: calc(100% - 16px);
+        left: rem(8);
+        top: rem(8);
+        background: #0091eb;
+
+        @include mq(md) {
+          height: calc(100% - 20px);
+          top: rem(10);
+        }
+      }
+    }
+
+    h3 {
+      font-size: rem(18);
+      display: block;
+      background: #eff9ff;
+      color: #000;
+      font-weight: $bold;
+      margin-top: rem(40);
+      margin-bottom: rem(16);
+      padding: rem(8);
+
+      @include mq(md) {
+        font-size: rem(20);
+        margin-bottom: rem(18);
+        padding: rem(8) rem(8) rem(12) rem(8);
+      }
+    }
+
+    h4 {
+      font-size: rem(16);
+      font-weight: $bold;
+      color: $black;
+      background: none;
+      padding-bottom: rem(12);
+      display: block;
+      border-bottom: solid rem(1) #d8d8d8;
+      margin-top: rem(40);
+      margin-bottom: rem(16);
+
+      @include mq(md) {
+        font-size: rem(18);
+        padding: rem(8) rem(8) rem(12) 0;
+        margin-bottom: rem(18);
+      }
+    }
+
+    p {
+      margin-bottom: rem(12);
+      font-size: rem(16);
+      line-height: 1.7;
+
+      @include mq(md) {
+        margin-bottom: rem(16);
+        font-size: rem(18);
+      }
+    }
+
+    ul {
+      margin-top: rem(16);
+      margin-bottom: rem(16);
+      margin-left: rem(20);
+
+      > li {
+        font-size: rem(14);
+        font-weight: $regular;
+        line-height: 1.7;
+        list-style: disc;
+
+        @include mq(md) {
+          font-size: rem(16);
+        }
+      }
+    }
+
+    ol {
+      margin-top: rem(16);
+      margin-bottom: rem(16);
+      margin-left: rem(20);
+
+      > li {
+        font-size: rem(14);
+        font-weight: $regular;
+        line-height: 1.5;
+        list-style: decimal;
+
+        @include mq(md) {
+          font-size: rem(16);
+        }
+      }
+    }
+
+    table,
+    td,
+    th {
+      border-collapse: collapse;
+      border: 1px solid #e5e5e5;
+    }
+
+    td,
+    th {
+      padding: rem(4) rem(8);
+      background: $white;
+    }
+
+    table {
+      margin-top: rem(16);
+      margin-bottom: rem(16);
+    }
+
+    img {
+      width: auto;
+      height: auto;
+      margin-top: rem(16);
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    margin: auto;
+    max-width: rem(120);
+    max-height: rem(120);
+    aspect-ratio: 1/1;
+
+    @include mq(md) {
+      max-width: rem(160);
+      max-height: rem(160);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-size: rem(24);
+    line-height: 1.7;
+    font-weight: $bold;
+
+    @include mq(md) {
+      font-size: rem(32);
+    }
+  }
+
+  &__info {
+    margin-top: rem(16);
+    margin-bottom: rem(20);
+
+    @include mq(md) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__info-wrapper {
+    background: #eff9ff;
+    border-radius: rem(8);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    padding: rem(16);
+    text-align: center;
+
+    @include mq(md) {
+      max-width: rem(540);
+      margin: auto;
+      padding: rem(16) rem(155) rem(16) rem(16);
+      position: relative;
+      text-align: right;
+      overflow: hidden;
+    }
+
+    p {
+      @include mq(md) {
+        line-height: 1;
+      }
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @include mq(md) {
+      position: absolute;
+      display: block;
+      right: rem(16);
+      bottom: rem(-22);
+      margin: auto;
+      width: rem(115);
+      height: rem(172);
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__unit {
+    padding-bottom: rem(24);
+    margin-bottom: rem(24);
+    border-bottom: solid rem(1) #d8d8d8;
+
+    @include mq(md) {
+      padding-bottom: rem(40);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__link {
+    text-align: center;
+    margin-top: rem(34);
+
+    @include mq(md) {
+      margin-top: rem(40);
+    }
+  }
+
+  &__description {
+    margin-top: rem(20);
+
+    @include mq(md) {
+      margin-top: rem(24);
+    }
+  }
+
+  &__text--sm {
+    font-size: rem(12);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(14);
+    }
+  }
+
+  &__text--lg {
+    font-size: rem(16);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text--xl {
+    font-size: rem(18);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(20);
+    }
+  }
+
+  &__text--2xl {
+    font-size: rem(24);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(24);
+    }
+  }
+
+  &__text--4xl {
+    font-size: rem(40);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(40);
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(16);
+    }
+  }
+
+  &__text--blue {
+    color: #0091eb;
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+
+  &__text--medium {
+    font-weight: $medium;
+  }
+
+  &__border--left {
+    border-left: solid rem(6) #0089ff;
+    padding-left: rem(12);
+  }
+
+  &__border--top {
+    border-top: solid rem(1) #d8d8d8;
+  }
+
+  &__info--width {
+    @media (min-width: 768px) and (max-width: 1220px) {
+      max-width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__text--left {
+    text-align: left;
+  }
+}

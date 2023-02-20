@@ -1,0 +1,96 @@
+.top-column {
+  background: url(../images/top/column-background@2x.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(60);
+
+    @include mq(md) {
+      padding-top: rem(120);
+      padding-bottom: rem(60);
+    }
+  }
+
+  &__inner--sm {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+
+    @include mq(md) {
+      padding-top: rem(64);
+      padding-bottom: rem(60);
+    }
+  }
+
+  &__head {
+    text-align: left;
+    line-height: 1.8;
+    margin-top: rem(64);
+    margin-bottom: rem(40);
+    padding-left: rem(8);
+    padding-right: rem(8);
+    max-width: rem(500);
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: $bold;
+
+    @include mq(md) {
+      margin-top: 0;
+      margin-bottom: rem(32);
+      text-align: center;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__text--lg {
+    font-size: rem(15);
+    
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text {
+    font-size: rem(15);
+
+    @include mq(md) {
+      font-size: rem(16);
+    }
+  }
+
+  &__text--medium {
+    font-weight: $medium;
+  }
+
+  &__body {
+    margin-bottom: rem(40);
+
+    @media (min-width: 768px) and (max-width: 1220px) {
+      max-width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__link {
+    text-align: center;
+    max-width: rem(280);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+      max-width: 100%;
+    }
+  }
+
+  &__foot-textbox {
+    text-align: left;
+
+    @include mq(md) {
+      text-align: center;
+    }
+  }
+}

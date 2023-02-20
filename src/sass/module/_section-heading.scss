@@ -1,0 +1,50 @@
+.section-heading {
+  position: relative;
+  text-align: center;
+  z-index: 4;
+
+  @include mq(md) {
+    margin-bottom: rem(80);
+  }
+
+  &:after {
+    content: url(../images/common/blue-circle.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin: auto;
+    z-index: 2;
+  }
+
+  &__copy {
+    color: #0091eb;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+    font-size: rem(14);
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text--black {
+    font-weight: $font-black;
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 3;
+    font-size: rem(22);
+
+    @include mq(md) {
+      font-size: rem(26);
+      margin-top: rem(8);
+    }
+  }
+}

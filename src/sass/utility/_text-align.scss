@@ -1,0 +1,63 @@
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-bottom {
+  text-align: right;
+}
+
+.u-mobile-text-center {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.u-mobile-text-left {
+  @media screen and (max-width: 767px) {
+    text-align: left;
+  }
+}
+
+.u-mobile-text-right {
+  @media screen and (max-width: 767px) {
+    text-align: right;
+  }
+}
+
+.u-mobile-text-bottom {
+  @media screen and (max-width: 767px) {
+    text-align: right;
+  }
+}
+
+.u-desktop-text-center {
+  @include mq("md") {
+    text-align: center;
+  }
+}
+
+.u-mobile-text-left {
+  @include mq("md") {
+    text-align: left;
+  }
+}
+
+.u-mobile-text-right {
+  @include mq("md") {
+    text-align: right;
+  }
+}
+
+.u-mobile-text-bottom {
+  @include mq("md") {
+    text-align: right;
+  }
+}

@@ -1,0 +1,101 @@
+.company-info {
+  &__inner {
+    padding-bottom: rem(32);
+    position: relative;
+
+    @include mq(md) {
+      padding-bottom: rem(60);
+    }
+
+    &:before {
+      @include mq(md) {
+        z-index: 1;
+        position: absolute;
+        content: url(../images/article/dot-left.svg);
+        left: rem(-60);
+        top: rem(60);
+      }
+    }
+  }
+
+  &__wrapper {
+    background: $white;
+    padding: rem(32) rem(16);
+    border-top: solid rem(1) #e5e5e5;
+    border-bottom: solid rem(1) #e5e5e5;
+    position: relative;
+    z-index: 3;
+
+    @include mq(md) {
+      padding: rem(40);
+      border-left: solid rem(1) #e5e5e5;
+      border-right: solid rem(1) #e5e5e5;
+      border-radius: rem(8);
+    }
+
+    &:before {
+      position: absolute;
+      content: url(../images/article/dot-left.svg);
+      left: rem(-230);
+      top: rem(150);
+      z-index: 1;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    max-width: rem(340);
+    margin: auto;
+    position: relative;
+    z-index: 3;
+
+    @include mq(md) {
+      max-width: rem(520);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__bottom {
+    margin-top: rem(20);
+    position: relative;
+    z-index: 3;
+
+    @include mq(md) {
+      margin-top: rem(40);
+    }
+  }
+
+  &__text--xl {
+    font-size: rem(18);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(20);
+    }
+  }
+
+  &__text--lg {
+    font-size: rem(16);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text--blue {
+    color: #0089ff;
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+}

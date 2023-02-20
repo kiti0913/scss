@@ -1,0 +1,206 @@
+// 4と5の倍数のクラスを作成する
+@mixin space-loop($className, $styleName) {
+  @for $i from 0 through 100 {
+    @if $i % 4 == 0 or $i % 5 == 0 {
+      #{$className + $i} {
+        #{$styleName}: #{$i}px;
+      }
+    }
+  }
+}
+
+//padding
+@include space-loop(".u-pt", "padding-top");
+@include space-loop(".u-pb", "padding-bottom");
+@include space-loop(".u-pl", "padding-left");
+@include space-loop(".u-pr", "padding-right");
+
+//margin
+@include space-loop(".u-mt", "margin-top");
+@include space-loop(".u-mb", "margin-bottom");
+@include space-loop(".u-ml", "margin-left");
+@include space-loop(".u-mr", "margin-right");
+
+.u-mobile {
+  &-m-auto {
+    @media screen and (max-width: 767px) {
+      margin: auto !important;
+    }
+  }
+
+  &-m0 {
+    @media screen and (max-width: 767px) {
+      margin: 0 !important;
+    }
+  }
+
+  &-mt-auto {
+    @media screen and (max-width: 767px) {
+      margin-top: auto !important;
+    }
+  }
+
+  &-mt0 {
+    @media screen and (max-width: 767px) {
+      margin-top: 0 !important;
+    }
+  }
+
+  &-mb-auto {
+    @media screen and (max-width: 767px) {
+      margin-bottom: auto !important;
+    }
+  }
+
+  &-mb0 {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &-ml-auto {
+    @media screen and (max-width: 767px) {
+      margin-left: auto !important;
+    }
+  }
+
+  &-ml0 {
+    @media screen and (max-width: 767px) {
+      margin-left: 0 !important;
+    }
+  }
+
+  &-mr-auto {
+    @media screen and (max-width: 767px) {
+      margin-right: auto !important;
+    }
+  }
+
+  &-mr0 {
+    @media screen and (max-width: 767px) {
+      margin-right: 0 !important;
+    }
+  }
+
+  &-p0 {
+    @media screen and (max-width: 767px) {
+      padding: 0 !important;
+    }
+  }
+
+  &-pt0 {
+    @media screen and (max-width: 767px) {
+      padding-top: 0 !important;
+    }
+  }
+
+  &-pb0 {
+    @media screen and (max-width: 767px) {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  &-pl0 {
+    @media screen and (max-width: 767px) {
+      padding-left: 0 !important;
+    }
+  }
+
+  &-pr0 {
+    @media screen and (max-width: 767px) {
+      padding-right: 0 !important;
+    }
+  }
+}
+
+.u-desktop {
+  &-m-auto {
+    @include mq("md") {
+      margin: auto !important;
+    }
+  }
+
+  &-m0 {
+    @include mq("md") {
+      margin: 0 !important;
+    }
+  }
+
+  &-mt-auto {
+    @include mq("md") {
+      margin-top: auto !important;
+    }
+  }
+
+  &-mt0 {
+    @include mq("md") {
+      margin-top: 0 !important;
+    }
+  }
+
+  &-mb-auto {
+    @include mq("md") {
+      margin-bottom: auto !important;
+    }
+  }
+
+  &-mb0 {
+    @include mq("md") {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &-ml-auto {
+    @include mq("md") {
+      margin-left: auto !important;
+    }
+  }
+
+  &-ml0 {
+    @include mq("md") {
+      margin-left: 0 !important;
+    }
+  }
+
+  &-mr-auto {
+    @include mq("md") {
+      margin-right: auto !important;
+    }
+  }
+
+  &-mr0 {
+    @include mq("md") {
+      margin-right: 0 !important;
+    }
+  }
+
+  &-p0 {
+    @include mq("md") {
+      padding: 0 !important;
+    }
+  }
+
+  &-pt0 {
+    @include mq("md") {
+      padding-top: 0 !important;
+    }
+  }
+
+  &-pb0 {
+    @include mq("md") {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  &-pl0 {
+    @include mq("md") {
+      padding-left: 0 !important;
+    }
+  }
+
+  &-pr0 {
+    @include mq("md") {
+      padding-right: 0 !important;
+    }
+  }
+}

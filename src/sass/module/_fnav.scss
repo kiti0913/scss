@@ -1,0 +1,44 @@
+.fnav {
+  margin-bottom: rem(32);
+
+  @include mq(md) {
+    margin-bottom: rem(60);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem(8);
+    margin-bottom: rem(8);
+  }
+
+  &__item {
+    color: $black;
+    border-right: solid rem(1) $black;
+    line-height: 1;
+    font-weight: $medium;
+    padding-right: rem(12);
+    margin-right: rem(12);
+    margin-bottom: rem(8);
+    font-size: rem(14);
+
+    @include mq(md) {
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    &:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__item a {
+    &:hover {
+      color: $black;
+    }
+  }
+}

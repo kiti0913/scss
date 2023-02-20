@@ -1,0 +1,47 @@
+.u-block {
+  display: block;
+}
+
+.u-mobile-block {
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.u-desktop-block {
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.u-inline-block {
+  display: inline-block;
+}
+
+.u-mobile-inline-block {
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+  }
+}
+
+.u-desktop-inline-block {
+  @include mq("md") {
+    display: inline-block;
+  }
+}
+
+.u-inline {
+  display: inline;
+}
+
+.u-mobile-inline {
+  @media screen and (max-width: 767px) {
+    display: inline;
+  }
+}
+
+.u-desktop-inline {
+  @include mq("md") {
+    display: inline;
+  }
+}

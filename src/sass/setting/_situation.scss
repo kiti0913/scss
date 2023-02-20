@@ -1,0 +1,24 @@
+// 要素を隠す
+.is-visibility {
+  visibility: hidden;
+}
+
+// 要素を非表示
+.is-hidden {
+  display: none;
+}
+
+// 要素を透過
+.is-opacity {
+  opacity: 0;
+}
+
+// スクロール禁止
+.is-overflow {
+  overflow: hidden;
+}
+
+// 要素を固定
+.is-fixed {
+  position: fixed;
+}

@@ -1,0 +1,7 @@
+.addtoany_shortcode {
+  margin-top: rem(20);
+
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}

@@ -1,0 +1,93 @@
+.breadcrumbs {
+  color: #a7a7a7;
+  font-size: rem(14);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  height: rem(40);
+  background-color: #f8f8f8;
+  overflow: hidden;
+
+  &__inner {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    width: 95%;
+
+    @include mq(md) {
+      width: 100%;
+      padding-right: $padding-pc;
+      padding-left: $padding-pc;
+    }
+
+    &::-webkit-scrollbar {
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+
+  span {
+    color: #000000;
+    margin-right: rem(8);
+    font-size: rem(14);
+    margin-left: rem(8);
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    padding-left: 15px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: rem(8);
+      height: rem(8);
+      border-top: solid 2px #697b91;
+      border-right: solid 2px #697b91;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 50%;
+      left: 0;
+      margin-top: -4px;
+    }
+  }
+
+  .home {
+    min-width: 8px;
+    min-height: 8px;
+    display: block;
+
+    span {
+      width: rem(8);
+      height: rem(8);
+    }
+
+    img {
+      width: rem(8);
+      height: rem(8);
+      object-fit: contain;
+
+      @include mq(md) {
+        width: rem(12);
+        height: rem(12);
+      }
+    }
+  }
+}

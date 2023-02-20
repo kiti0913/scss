@@ -1,0 +1,95 @@
+.service-achievement {
+  background-color: #eff9ff;
+
+  &__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(32);
+
+    @include mq(md) {
+      padding-top: rem(100);
+      padding-bottom: rem(60);
+    }
+  }
+
+  &__head {
+    margin-top: rem(64);
+    text-align: left;
+
+    @include mq(md) {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    padding: rem(12) rem(16);
+
+    @include mq(md) {
+      padding: rem(40);
+    }
+  }
+
+  &__body {
+    margin-top: rem(28);
+    max-height: rem(380);
+    height: 100%;
+    overflow-y: scroll;
+    background: $white;
+    border-radius: rem(8);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.16);
+
+    @include mq(md) {
+      margin-top: rem(24);
+      max-height: rem(320);
+      height: 100%;
+    }
+  }
+
+  &__text {
+    font-size: rem(12);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(16);
+    }
+  }
+
+  &__text--sm {
+    font-size: rem(12);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(14);
+    }
+  }
+
+  &__text--xl {
+    font-size: rem(18);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(20);
+    }
+  }
+
+  &__text--lg {
+    font-size: rem(16);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text--blue {
+    color: #0089ff;
+  }
+
+  &__text--medium {
+    font-weight: $medium;
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+}

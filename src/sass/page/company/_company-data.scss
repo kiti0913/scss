@@ -1,0 +1,91 @@
+.company-data {
+  &__inner {
+    padding-bottom: rem(32);
+    padding-top: rem(80);
+
+    @include mq(md) {
+      padding-bottom: rem(60);
+      padding-top: rem(100);
+    }
+  }
+
+  &__wrapper {
+    margin-top: rem(80);
+    border: solid rem(1) #d8d8d8;
+    border-bottom: none;
+
+    @include mq(md) {
+      margin-top: 0;
+    }
+  }
+
+  &__info-title {
+    font-size: rem(16);
+    line-height: 1.7;
+    font-weight: $bold;
+    padding: rem(10) rem(12);
+    background: #eff9ff;
+
+    @include mq(md) {
+      font-size: rem(18);
+      padding: rem(16) rem(12) rem(16) rem(20);
+    }
+  }
+
+  &__text--blue {
+    color: #0089ff;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-bottom: solid rem(1) #d8d8d8;
+
+    @include mq(md) {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+
+  &__info-detail {
+    font-size: rem(16);
+    line-height: 1.7;
+    font-weight: $regular;
+    padding: rem(10) rem(12);
+
+    @include mq(md) {
+      font-size: rem(18);
+      padding: rem(16) rem(20) rem(16) rem(20);
+    }
+
+    p {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__text--xl {
+    font-size: rem(18);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(20);
+    }
+  }
+
+  &__text--lg {
+    font-size: rem(16);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text--blue {
+    color: #0089ff;
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+}

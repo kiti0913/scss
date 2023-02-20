@@ -1,0 +1,77 @@
+.company-notice {
+  background: #eff9ff;
+
+  &__inner {
+    padding-top: rem(32);
+    padding-bottom: rem(32);
+
+    @include mq(md) {
+      padding-top: rem(60);
+      padding-bottom: rem(60);
+    }
+  }
+
+  &__head {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: rem(22);
+    line-height: 1.7;
+    font-weight: $bold;
+
+    @include mq(md) {
+      font-size: rem(26);
+    }
+  }
+
+  &__image {
+    width: rem(55);
+    height: rem(64);
+    margin: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__bottom {
+    background: $white;
+    padding: rem(16);
+    border-radius: rem(8);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.16);
+    margin-top: rem(24);
+
+    @include mq(md) {
+      padding: rem(40);
+    }
+  }
+
+  &__text--xl {
+    font-size: rem(18);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(20);
+    }
+  }
+
+  &__text--lg {
+    font-size: rem(16);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text--blue {
+    color: #0089ff;
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+}

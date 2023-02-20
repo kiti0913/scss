@@ -1,0 +1,53 @@
+.footer {
+  &__head {
+    margin-top: rem(32);
+    margin-bottom: rem(24);
+
+    @include mq(md) {
+      margin-top: rem(54);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__head a {
+    width: rem(274);
+    height: rem(32);
+    display: block;
+    margin: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__logo {
+    width: rem(281);
+    height: rem(24);
+    margin: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__foot {
+    width: 100vw;
+    background: #0089ff;
+    margin: auto calc(50% - 50vw);
+    text-align: center;
+    padding: rem(16);
+  }
+
+  &__copyright {
+    color: $white;
+    font-size: rem(12);
+  }
+
+  figure {
+    margin: 0;
+  }
+}

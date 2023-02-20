@@ -1,0 +1,29 @@
+.gnav {
+  &__list {
+    @include mq(md) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: rem(8);
+      margin-bottom: rem(8);
+    }
+  }
+
+  &__item {
+    color: $white;
+    border-right: solid rem(1) $white;
+    line-height: 1.5;
+    font-weight: $medium;
+
+    @include mq(md) {
+      padding-right: rem(20);
+      margin-right: rem(20);
+    }
+
+    &:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+}

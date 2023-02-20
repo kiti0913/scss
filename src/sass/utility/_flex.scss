@@ -1,0 +1,49 @@
+.u-flex {
+  display: flex;
+}
+
+.u-desktop-flex {
+  @include mq("md") {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.u-mobile-flex {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.u-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-desktop-flex-col {
+  @include mq("md") {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.u-mobile-flex-col {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.u-flex-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.u-flex-center-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

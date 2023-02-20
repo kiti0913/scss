@@ -1,0 +1,47 @@
+.u-text-bold {
+  font-weight: 700;
+}
+
+.u-desktop-text-bold {
+  @include mq("md") {
+    font-weight: 700;
+  }
+}
+
+.u-mobile-bold {
+  @media screen and (max-width: 767px) {
+    font-weight: 700;
+  }
+}
+
+.u-text-normal {
+  font-weight: 400;
+}
+
+.u-desktop-text-normal {
+  @include mq("md") {
+    font-weight: 400;
+  }
+}
+
+.u-mobile-text-normal {
+  @media screen and (max-width: 767px) {
+    font-weight: 400;
+  }
+}
+
+.u-text-light {
+  font-weight: 300;
+}
+
+.u-desktop-text-light {
+  @include mq("md") {
+    font-weight: 300;
+  }
+}
+
+.u-mobile-text-light {
+  @media screen and (max-width: 767px) {
+    font-weight: 300;
+  }
+}

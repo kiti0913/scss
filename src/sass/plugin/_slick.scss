@@ -1,0 +1,103 @@
+.slick {
+  &-arrow {
+    &:before {
+      content: "" !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute;
+      top: rem(16);
+      left: 0;
+
+      @include mq(md) {
+        top: 0;
+      }
+    }
+  }
+
+  &-prev {
+    width: rem(58) !important;
+    height: rem(58) !important;
+    z-index: 3 !important;
+    top: 25% !important;
+    left: rem(16) !important;
+
+    @include mq(md) {
+      left: -12px !important;
+      top: 30% !important;
+    }
+
+    &:hover {
+      opacity: 1 !important;
+
+      &:before {
+        opacity: 1 !important;
+      }
+    }
+
+    &:before {
+      background: url(../images/common/slick-arrow-prev.svg) !important;
+      opacity: 1 !important;
+      width: rem(40) !important;
+      height: rem(40) !important;
+      background-size: contain !important;
+
+      @include mq(md) {
+        width: rem(58) !important;
+        height: rem(58) !important;
+      }
+    }
+  }
+
+  &-next {
+    width: rem(58) !important;
+    height: rem(58) !important;
+    z-index: 3 !important;
+    top: 25% !important;
+    right: 0 !important;
+
+    @include mq(md) {
+      right: -12px !important;
+      top: 30% !important;
+    }
+
+    &:hover {
+      opacity: 1 !important;
+
+      &:before {
+        opacity: 1 !important;
+      }
+    }
+
+    &:before {
+      background: url(../images/common/slick-arrow-next.svg) !important;
+      opacity: 1 !important;
+      width: rem(40) !important;
+      height: rem(40) !important;
+      background-size: contain !important;
+
+      @include mq(md) {
+        width: rem(58) !important;
+        height: rem(58) !important;
+      }
+    }
+  }
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: $white;
+  outline: none;
+}
+
+.top-report__body {
+  .slick-prev,
+  .slick-next {
+    top: 20% !important;
+
+    @include mq(md) {
+      top: 25% !important;
+    }
+  }
+}

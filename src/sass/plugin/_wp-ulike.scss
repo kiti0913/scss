@@ -1,0 +1,33 @@
+.wpulike-default button.wp_ulike_btn {
+  color: none !important;
+  background-color: transparent !important;
+  min-height: 24px !important;
+  min-width: 20px !important;
+}
+
+.wpulike-default .count-box {
+  box-shadow: none !important;
+  color: #0091eb !important;
+  font-size: rem(18) !important;
+  font-weight: $bold !important;
+  background: none !important;
+}
+
+.wpulike-default .wp_ulike_put_image.wp_ulike_btn_is_active:after {
+  filter: none !important;
+}
+
+.wpulike-default .count-box:before {
+  display: none !important;
+}
+
+.wpulike-default .wp_ulike_put_image:after {
+  background: url(../images/article/good-icon.png) no-repeat !important;
+  width: rem(18) !important;
+  height: rem(20) !important;
+  background-size: contain !important;
+}
+
+.wpulike {
+  padding: 0 !important;
+}

@@ -1,0 +1,160 @@
+.voice-post {
+  &__inner {
+    padding-bottom: rem(32);
+
+    @include mq(md) {
+      padding-bottom: rem(64);
+    }
+  }
+
+  &__head {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: rem(16);
+    position: relative;
+    z-index: 3;
+    margin-bottom: rem(32);
+
+    @include mq(md) {
+      grid-template-columns: 150px 1fr;
+      gap: rem(40);
+      margin-bottom: rem(40);
+    }
+
+    &:before {
+      position: absolute;
+      content: url(../images/article/dot-sp-left.svg);
+      left: rem(-100);
+      top: rem(164);
+      z-index: 1;
+
+      @include mq(md) {
+        content: url(../images/article/dot-left.svg);
+        left: rem(-60);
+        top: rem(52);
+      }
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    max-width: rem(160);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 3;
+
+    @include mq(md) {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__top {
+    margin-bottom: rem(20);
+    text-align: center;
+    position: relative;
+    z-index: 3;
+
+    @include mq(md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+
+  &__text--lg {
+    font-size: rem(16);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text--gray {
+    color: #999999;
+  }
+
+  &__text--2xl {
+    font-size: rem(22);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(24);
+    }
+  }
+
+  &__text--3xl {
+    font-size: rem(26);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(32);
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__unit {
+    border-top: solid rem(1) #d8d8d8;
+    padding-top: rem(28);
+    margin-bottom: rem(28);
+
+    @include mq(md) {
+      padding-top: rem(42);
+      margin-bottom: rem(42);
+    }
+  }
+
+  &__text--blue {
+    color: #0089ff;
+  }
+
+  &__boder-left {
+    padding-left: rem(16);
+    border-left: solid rem(8) #0089ff;
+  }
+
+  &__question {
+    margin-bottom: rem(20);
+
+    @include mq(md) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__foot {
+    text-align: center;
+    max-width: rem(280);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+      max-width: rem(370);
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.slider {
+  margin: 0 rem(-20);
+  display: none;
+
+  &.slick-initialized {
+    display: block;
+  }
+
+  &__content {
+    padding: 0 rem(48);
+
+    @include mq(md) {
+      padding: 0 rem(20);
+    }
+  }
+
+  &__content--shadow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &__content--white {
+    background: $white;
+  }
+
+  &__head {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: rem(20);
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: rem(230);
+      object-fit: cover;
+      border-radius: rem(8);
+    }
+  }
+
+  &__head--border-radius {
+    img {
+      border-radius: rem(8) rem(8) 0 0;
+    }
+  }
+
+  &__head--margin-bottom {
+    margin-bottom: 0;
+  }
+
+  &__body {
+    margin-bottom: rem(12);
+  }
+
+  &__wrapper {
+    background: $white;
+    padding: rem(16);
+    border-radius: 0 0 rem(8) rem(8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &__time {
+    color: #a7a7a7;
+    display: inline-block;
+  }
+
+  &__text--sm {
+    font-size: rem(12);
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+
+  &__text--blue {
+    color: #0091eb;
+  }
+
+  &__text--black {
+    font-weight: $font-black;
+  }
+
+  &__title {
+    font-size: rem(15);
+    line-height: 1.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    @include mq(md) {
+      font-size: rem(16);
+    }
+  }
+
+  &__description {
+    margin-top: rem(8);
+    min-height: rem(55);
+
+    @include mq(md) {
+      margin-top: rem(16);
+    }
+  }
+
+  &__more-text {
+    font-size: rem(14);
+
+    @include mq(md) {
+      font-size: rem(15);
+    }
+
+    &:hover {
+      color: #0091eb;
+    }
+  }
+
+  &__foot-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  &__link-icon {
+    margin: 0;
+    margin-left: rem(8);
+    width: rem(12);
+    height: rem(8);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text--overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    @include mq(md) {
+      -webkit-line-clamp: 1;
+    }
+  }
+
+  &__text--overflow-default {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    @include mq(md) {
+      -webkit-line-clamp: 2;
+    }
+  }
+}

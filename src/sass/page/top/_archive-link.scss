@@ -1,0 +1,77 @@
+.archive-link {
+  background-image: url(../images/common/archive-link-sp-background@2x.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+
+  @include mq(md) {
+    background-image: url(../images/common/archive-link-background@2x.jpg);
+  }
+
+  &__inner {
+    padding-top: rem(32);
+    padding-bottom: rem(32);
+
+    @include mq(md) {
+      padding-top: rem(60);
+      padding-bottom: rem(60);
+    }
+  }
+
+  &__head {
+    text-align: center;
+    margin-bottom: rem(40);
+  }
+
+  &__body {
+    text-align: left;
+    margin-bottom: rem(40);
+
+    @include mq(md) {
+      text-align: center;
+    }
+  }
+
+  &__foot {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    gap: rem(16);
+    max-width: rem(280);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+      gap: rem(40);
+      grid-template-columns: 1fr 1fr;
+      max-width: rem(720);
+    }
+  }
+
+  &__title {
+    font-size: rem(22);
+
+    @include mq(md) {
+      font-size: rem(26);
+    }
+  }
+
+  &__text--lg {
+    font-size: rem(15);
+    line-height: 1.7;
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__text--bold {
+    font-weight: $bold;
+  }
+
+  &__text--medium {
+    font-weight: $medium;
+  }
+}

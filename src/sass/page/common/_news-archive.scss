@@ -1,0 +1,35 @@
+.news-archive {
+  background: #eff9ff;
+
+  &__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(32);
+
+    @include mq(md) {
+      padding-top: rem(100);
+      padding-bottom: rem(64);
+    }
+  }
+
+  &__inner--sm {
+    padding-top: rem(28);
+    padding-bottom: rem(32);
+
+    @include mq(md) {
+      padding-top: rem(64);
+      padding-bottom: rem(64);
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: rem(32);
+
+    @include mq(md) {
+      grid-template-columns: 3fr rem(310);
+      gap: rem(48);
+    }
+  }
+}

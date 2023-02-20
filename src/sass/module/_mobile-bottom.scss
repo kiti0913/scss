@@ -1,0 +1,41 @@
+.mobile-bottom {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 1s, visibility 1s, transform 1s;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+
+  @include mq(md) {
+    display: none;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: rem(12);
+    margin-top: rem(14);
+    margin-bottom: rem(10);
+    align-items: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &.scroll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+}

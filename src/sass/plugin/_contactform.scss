@@ -1,0 +1,58 @@
+.wpcf7-list-item {
+  margin: 0 rem(16) 0 0 !important;
+
+  label {
+    padding: 0 rem(16) 0 0 !important;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    display: none;
+  }
+
+  input[type="radio"] + span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  input[type="radio"] + span:before {
+    content: "";
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    border: solid rem(1) #e5e5e5;
+    background-color: #fff;
+    border-radius: rem(9999);
+    margin-right: rem(6);
+
+    @include mq(md) {
+      width: rem(26);
+      height: rem(26);
+    }
+  }
+
+  input[type="radio"]:checked + span:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: rem(12);
+    height: rem(12);
+    border: solid rem(1) #e5e5e5;
+    background-color: #0089ff;
+    border-radius: rem(9999);
+    left: rem(6);
+
+    @include mq(md) {
+      width: rem(14);
+      height: rem(14);
+      left: rem(6);
+    }
+  }
+}
+
+.wpcf7-spinner {
+  display: none !important;
+}
